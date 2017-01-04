@@ -1,6 +1,8 @@
 package io.vertx.kafka.client;
 
 import io.vertx.core.buffer.Buffer;
+import io.vertx.kafka.client.serialization.BufferDeserializer;
+import io.vertx.kafka.client.serialization.BufferSerializer;
 import org.apache.kafka.common.serialization.ByteArrayDeserializer;
 import org.apache.kafka.common.serialization.ByteArraySerializer;
 import org.apache.kafka.common.serialization.ByteBufferDeserializer;
@@ -24,7 +26,7 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentMap;
 
 /**
- * A registry for Kafka Serializers and Deserializers allowing to lookup serializers by class.
+ * A registry for Kafka Serializers and Deserializers allowing to lookup serialization by class.
  * <p>
  * The {@link BufferSerializer} and {@link BufferDeserializer} are registered along with the out of the box Kafka
  * ones.
