@@ -138,6 +138,7 @@
           <artifactId>maven-surefire-plugin</artifactId>
           <configuration>
             <argLine>-server -Xmx1200M</argLine>
+            <runOrder>alphabetical</runOrder>
           </configuration>
         </plugin>
       </plugins>
